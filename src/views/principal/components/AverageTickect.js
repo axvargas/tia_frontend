@@ -4,7 +4,8 @@ import {
     Card,
     CardContent,
     Grid,
-    Typography
+    Typography,
+    Box
 } from '@material-ui/core';
 import MoneyIcon from '@material-ui/icons/Money';
 
@@ -25,13 +26,19 @@ const AverageTicket = ({ avg_tickets }) => (
                         variant="subtitle1"
                     >
                         AVG. TICKETS
-            </Typography>
-                    <Typography
-                        color="textPrimary"
-                        variant="h4"
-                    >
-                        {avg_tickets ? `$${Number(avg_tickets).toFixed(2)}` : '$...'}
                     </Typography>
+                    <Box display="flex" justifyContent="flex-start" alignItems="center" bgcolor="background.paper">
+                        <Typography
+                            color="textPrimary"
+                            variant="h6"
+                        >
+                            {'$ '}
+                        </Typography>
+                        <Box fontWeight="fontWeightBold" width="100%" fontSize="h4.fontSize">
+                            {avg_tickets ? `${Number(avg_tickets).toFixed(2)}` : '...'}
+                        </Box>
+                    </Box>
+
                 </Grid>
                 <Grid item>
                     <Avatar>

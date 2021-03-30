@@ -4,11 +4,11 @@ import {
   Card,
   CardContent,
   Grid,
-  Typography
+  Typography,
+  Box
 } from '@material-ui/core';
-import InsertChartIcon from '@material-ui/icons/InsertChartOutlined';
-
-const AverageProductQuantity = ({avg_products_qty}) => (
+import AssignmentIcon from '@material-ui/icons/Assignment';
+const AverageProductQuantity = ({ avg_products_qty }) => (
   <Card
     sx={{ height: '100%' }}
   >
@@ -26,16 +26,22 @@ const AverageProductQuantity = ({avg_products_qty}) => (
           >
             AVG. PRODUCT QTY.
           </Typography>
-          <Typography
-            color="textPrimary"
-            variant="h4"
-          >
-            {avg_products_qty ?`${Number(avg_products_qty).toFixed(2)} units`: '... units'}
-          </Typography>
+          <Box display="flex" justifyContent="flex-start" alignItems="center" bgcolor="background.paper">
+            <Box fontWeight="fontWeightBold" width="100%" fontSize="h4.fontSize" mr={-7}>
+              {avg_products_qty ? `${Number(avg_products_qty).toFixed(2)}` : '...'}
+            </Box>
+            <Typography
+              color="textPrimary"
+              variant="h6"
+            >
+              units
+            </Typography>
+          </Box>
+
         </Grid>
         <Grid item>
           <Avatar>
-            <InsertChartIcon />
+            <AssignmentIcon />
           </Avatar>
         </Grid>
       </Grid>

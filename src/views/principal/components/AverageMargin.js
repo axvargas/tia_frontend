@@ -8,9 +8,9 @@ import {
   Typography,
   LinearProgress,
 } from '@material-ui/core';
-import PeopleIcon from '@material-ui/icons/PeopleOutlined';
+import InsertChartIcon from '@material-ui/icons/InsertChartOutlined';
 
-const AverageMargin = ({avg_margin}) => (
+const AverageMargin = ({ avg_margin }) => (
   <Card >
     <CardContent>
       <Grid
@@ -26,16 +26,22 @@ const AverageMargin = ({avg_margin}) => (
           >
             AVG. MARGIN
           </Typography>
-          <Typography
-            color="textPrimary"
-            variant="h4"
-          >
-            {avg_margin ? `${Number(avg_margin*100).toFixed(2)}%` : '...%'}
+          <Box display="flex" justifyContent="flex-start" alignItems="center" bgcolor="background.paper">
+            <Box fontWeight="fontWeightBold" width="100%" fontSize="h4.fontSize">
+              {avg_margin ? `${Number(avg_margin * 100).toFixed(2)}` : '...'}
+            </Box>
+            <Typography
+              color="textPrimary"
+              variant="h6"
+            >
+              %
           </Typography>
+          </Box>
+
         </Grid>
         <Grid item>
           <Avatar>
-            <PeopleIcon />
+            <InsertChartIcon />
           </Avatar>
         </Grid>
       </Grid>
@@ -48,7 +54,7 @@ const AverageMargin = ({avg_margin}) => (
       />
       <Box sx={{ pt: 3 }}>
         <LinearProgress
-          value={avg_margin*100}
+          value={avg_margin * 100}
           variant="determinate"
         />
       </Box>

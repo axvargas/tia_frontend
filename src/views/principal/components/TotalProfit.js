@@ -4,7 +4,8 @@ import {
   Card,
   CardContent,
   Grid,
-  Typography
+  Typography,
+  Box
 } from '@material-ui/core';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 
@@ -24,12 +25,17 @@ const TotalProfit = (props) => (
           >
             TOTAL PROFIT
           </Typography>
-          <Typography
-            color="textPrimary"
-            variant="h4"
-          >
-            $23,200
-          </Typography>
+          <Box display="flex" justifyContent="flex-start" alignItems="center" bgcolor="background.paper">
+            <Typography
+              color="textPrimary"
+              variant="h6"
+            >
+              {'$ '}
+            </Typography>
+            <Box fontWeight="fontWeightBold" width="100%" fontSize="h4.fontSize">
+              25,260.56
+            </Box>
+          </Box>
         </Grid>
         <Grid item>
           <Avatar>
