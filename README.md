@@ -74,3 +74,5 @@ Images of the project
 
 ![image](https://user-images.githubusercontent.com/56695700/113028025-6b631980-9150-11eb-8a3f-458c2b83a512.png)
 
+![image](https://user-images.githubusercontent.com/56695700/113028193-9e0d1200-9150-11eb-9da8-41ce722d0170.png)
+
